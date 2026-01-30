@@ -1,0 +1,29 @@
+---
+- name: YogaNew
+                                    
+                                        Yoga for good health
+  url: /./yoga/
+- name: Fitness
+                                    
+                                        Fitness landing page
+  url: /./pages/fitness-coach
+- name: Coach
+                                    
+                                        Motivational Speaker
+  url: /./
+- name: Business Coach
+                                    
+                                        Consulting Business Coach
+  url: /./pages/business-coach
+- name: Life Coach
+                                    
+                                        LifeCoach layout design.
+  url: /./pages/life-coach
+- name: CEO Coaching
+                                    
+                                        Excellent in CEO Coaching
+  url: /./pages/ceo-coach
+- name: Grid
+  url: /./pages/program-grid
+- name: List
+  url: /./pages/program-list
