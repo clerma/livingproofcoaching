@@ -1,0 +1,115 @@
+---
+layout: default
+title: "About | Living Proof"
+description: "Meet Monica Romero, founder of Living Proof. Faith-based wellness coaching for mind, body, and spirit."
+permalink: /about/
+
+hero:
+  background_image: "/assets/img/about-hero-img.jpg"
+  video_url: "https://www.youtube.com/watch?v=JRzWRZahOVU"
+  heading: "Monica Romero"
+  subheading: "Faith-Based Wellness Coach"
+
+about_intro:
+  heading: "About Living Proof"
+  paragraphs:
+    - "My name is Monica, and I want to get real with you for a moment."
+    - "Like many people, I have walked through seasons of pain, confusion, and questions about purpose."
+    - "Through my walk with the Lord and intentional inner work, I discovered that healing is possible when we address the mind, body, and spirit together."
+    - "Living Proof was born from that journey — proof that restoration is real and transformation is possible."
+
+gallery_images:
+  - "/assets/img/coach-img-1.jpg"
+  - "/assets/img/coach-img-2.jpg"
+  - "/assets/img/coach-img-3.jpg"
+  - "/assets/img/coach-img-4.jpg"
+  - "/assets/img/coach-img-5.jpg"
+
+testimonials:
+  - quote: "Working with Monica helped me reconnect my faith and emotional health in a way I never had before."
+    name: "Client"
+    title: "Faith-Based Coaching Client"
+  - quote: "Living Proof gave me practical tools that strengthened my mental health and deepened my spiritual walk."
+    name: "Client"
+    title: "Wellness Coaching Client"
+---
+<!-- HERO SECTION -->
+<div class="bg-cover"
+     style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
+     url('{{ page.hero.background_image | relative_url }}');">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+        <div class="py-lg-20 py-12 text-white text-center">
+
+          {% if page.hero.video_url %}
+          <a class="popup-youtube icon-shape rounded-circle btn-play icon-xl text-decoration-none mb-3"
+             href="{{ page.hero.video_url }}">
+            <i class="fas fa-play"></i>
+          </a>
+          {% endif %}
+
+          <h1 class="text-white mb-2 display-2">
+            {{ page.hero.heading }}
+          </h1>
+          <p class="lead text-light">
+            {{ page.hero.subheading }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ABOUT SECTION -->
+<div class="py-lg-16 py-6">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+
+        <h2 class="mb-4">{{ page.about_intro.heading }}</h2>
+
+        {% for paragraph in page.about_intro.paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- IMAGE GALLERY -->
+<div class="container-fluid mb-5">
+  <div class="row justify-content-center">
+    {% for image in page.gallery_images %}
+      <div class="col-md-2 me-2 mb-2">
+        <img src="{{ image | relative_url }}" alt="Monica Romero"
+             class="w-100 rounded">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- TESTIMONIALS -->
+<div class="pt-18 pb-10"
+     style="background:linear-gradient(360deg, #FFFFFF 0%, rgba(255,255,255,0) 102.23%), #F8F8F8;">
+  <div class="container">
+    <div class="row text-center mb-8">
+      <div class="offset-lg-2 col-lg-8 col-12">
+        <h2 class="h1">What Clients Are Saying</h2>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for testimonial in page.testimonials %}
+      <div class="col-lg-6 col-md-12 col-12 mb-6">
+        <div class="p-6 bg-white rounded shadow-sm h-100">
+          <p class="h4 font-italic mb-4">
+            “{{ testimonial.quote }}”
+          </p>
+          <p class="mb-0 fw-bold">{{ testimonial.name }}</p>
+          <p class="small text-muted">{{ testimonial.title }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
