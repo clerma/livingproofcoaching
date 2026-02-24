@@ -1,262 +1,46 @@
-<!-- Navigation preserved from original template -->
 <nav class="navbar navbar-expand-lg navbar-default fixed-top border-3 border-top border-primary navbar-dark">
-        <!-- navigation start -->
-        <div class="container">
+  <div class="container">
 
-            <a class="navbar-brand @@brandLogo" href="/"><img src="{{site.data.company.logo_image | relative_url }}" alt="" class="img-fluid w-50"></a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="icon-bar top-bar mt-0"></span>
-                <span class="icon-bar middle-bar"></span>
-                <span class="icon-bar bottom-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-default">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-default" aria-controls="navbar-default" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fas fa-times"></i>
-                </button>
-                <ul class="navbar-nav ms-auto me-lg-3 ">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/">
+      <img src="{{ site.data.company.logo_image | relative_url }}" alt="Living Proof Logo" class="img-fluid w-50">
+    </a>
 
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbar-default" aria-controls="navbar-default"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="icon-bar top-bar mt-0"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            About
-                        </a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menu-4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Resources
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-md dropdown-menu-arrow  dropdown-menu-xl-start " aria-labelledby="menu-4">
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-list-group-item dropdown-toggle" href="#">
-                                    <h4 class="h5 ">Case Study</h4>
-                                    <p class="text-muted mb-0 font-12">
-                                        Case Study Element Design
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/case-studies">
-                                            Case Study</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/case-study-single">
-                                            Single</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-list-group-item dropdown-toggle" href="#">
-                                    <h4 class="h5">Help Center </h4>
-                                    <p class="text-muted mb-0 font-12">
-                                        Beautiful help center design.
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/help-center">
-                                            Help</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/help-center-category">
-                                            Category</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/help-center-article">
-                                            Category Article</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/help-center-profile-member">
-                                            Help Center Profile</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a class="dropdown-list-group-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <h4 class="h5">Webinar</h4>
-                                    <p class="text-muted mb-0 font-12">
-                                        Webinar Landing Page Design
-                                    </p>
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/coach-webinar">
-                                            Webinar List </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/coach-webinar-single">
-                                            Webinar Single </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/coach-webinar-booking">
-                                            Webinar Booking </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-list-group-item" href="/book-download-page">
-                                    <h4 class="h5">Download Book</h4>
-                                    <p class="text-muted mb-0 font-12">
-                                        Download the book for guide.
-                                    </p>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-list-group-item" href="/stories">
-                                    <div>
-                                        <h4 class="h5">Success Stories</h4>
-                                        <p class="text-muted mb-0 font-12">
-                                            See what our clients say &amp; stories.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-list-group-item" href="/booking-page">
-                                    <div>
-                                        <h4 class="h5">Free Session Booking</h4>
-                                        <p class="text-muted mb-0 font-12">
-                                            Your 60-minute Free Coaching Session.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menu-5" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Account
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-arrow  dropdown-menu-xl-start " aria-labelledby="menu-5">
-                            <li class="dropdown-submenu ">
-                                <a class="dropdown-item dropdown-toggle" href="#">
-                                    Sign In
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/signin-cover">
-                                            Side Cover </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/signin">
-                                            Basic</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu ">
-                                <a class="dropdown-item dropdown-toggle" href="#">
-                                    Sign Up
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/signup-cover">
-                                            Side Cover </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/signup">
-                                            Basic</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/verify-code">
-                                    Verify Code
-                                </a>
-                            </li>
-                            <li class="dropdown-submenu ">
-                                <a class="dropdown-item dropdown-toggle" href="#">
-                                    Password Reset
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/password-reset-cover">
-                                            Side Cover</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/password-reset">
-                                            Basic</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu ">
-                                <a class="dropdown-item dropdown-toggle" href="#">
-                                    Setting
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-lg-end">
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-profile">
-                                            Profile</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-subscription">
-                                            Subscription</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-security">
-                                            Security</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-notifications">
-                                            Notifications</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-user">
-                                            Users</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-payment-plan">
-                                            Payment Plan</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="/dashboard-payment-history">
-                                            Payment History</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="menu-6" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Shop
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-arrow  dropdown-menu-xl-start " aria-labelledby="menu-6">
-                            <li>
-                                <a class="dropdown-item" href="/shop">
-                                    Product
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/shop-single">
-                                    Product Single
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/shop-cart">
-                                    Cart
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/shop-checkout">
-                                    Checkout
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/shop-empty-cart">
-                                    Empty Cart
-                                </a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" href="/shop-order-completed">
-                                    Order Completed
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+    <!-- Navigation -->
+    <div class="collapse navbar-collapse" id="navbar-default">
+      <ul class="navbar-nav ms-auto">
 
-                </ul>
-                <div class="header-btn ">
-                    <a href="https://bit.ly/38DGpi8 " class="btn btn-primary btn-sm ">Buy Now</a>
-                </div>
-            </div>
+        {% assign current = page.url | replace: "index.html", "" %}
 
-        </div>
-    </nav>
+        {% for item in site.data.navigation %}
+          {% assign item_url = item.url | relative_url %}
+          <li class="nav-item">
+            <a class="nav-link {% if current == item.url %}active{% endif %}"
+               href="{{ item_url }}">
+              {{ item.name }}
+            </a>
+          </li>
+        {% endfor %}
+
+      </ul>
+
+      <!-- Optional CTA Button -->
+      <div class="ms-lg-3">
+        <a href="/contact/" class="btn btn-primary btn-sm">
+          Book a Consultation
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</nav>
