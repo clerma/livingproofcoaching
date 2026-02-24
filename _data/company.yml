@@ -1,6 +1,6 @@
 ---
-name: "Coach - Bootstrap 5 Theme"
-logo_image: "/assets/img/./assets/images/logo.svg"
+name: "Coach"
+logo_image: "/assets/img/living-proof.svg"
 phone: "{{ site.phone | default: '' }}"
 email: "{{ site.email | default: '' }}"
 website: "{{ site.url }}"
