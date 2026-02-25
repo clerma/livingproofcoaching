@@ -1,14 +1,22 @@
 ---
 layout: post
-title: "Willingness Without Boundaries Turns Into Resentment"
-date: 2026-02-25
-author: "Monica Romero"
-categories: [Faith, Mental Health]
-tags: [boundaries, servant heart, burnout, faith, emotional health]
-image: /assets/img/slider-img-2.jpg
-excerpt: "A servant’s heart still needs God-given boundaries. Learn the difference between serving from love and over-functioning from fear."
+title: Willingness Without Boundaries Turns Into Resentment
+date: 2026-02-25T00:00:00Z
+author: Monica Romero
+categories:
+  - Faith
+  - Mental Health
+tags:
+  - boundaries
+  - servant heart
+  - burnout
+  - faith
+  - emotional health
+image: /uploads/jan-canty-juqxv0dunzg-unsplash.jpg
+excerpt: >-
+  A servant’s heart still needs God-given boundaries. Learn the difference
+  between serving from love and over-functioning from fear.
 ---
-
 🌱 *“Willingness without boundaries turns into resentment.”*
 
 Are you a “yes” person?
