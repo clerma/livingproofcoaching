@@ -193,15 +193,6 @@ _enabled_editors:
   - content
   - visual
 _inputs:
-  '360':
-    type: image
-    cascade: true
-  categories:
-    type: multiselect
-    options:
-      allow_create: true
-      empty_type: array
-    cascade: true
   tags:
     type: multiselect
     options:
@@ -216,30 +207,6 @@ _inputs:
     cascade: true
   description:
     type: textarea
-    cascade: true
-  portrait:
-    type: image
-    cascade: true
-  social:
-    type: image
-    cascade: true
-  roaming:
-    type: image
-    cascade: true
-  virtual:
-    type: image
-    cascade: true
-  glam:
-    type: image
-    cascade: true
-  page-image-1:
-    type: image
-    cascade: true
-  page-image-2:
-    type: image
-    cascade: true
-  page-image-3:
-    type: image
     cascade: true
 _select_data:
   social:
