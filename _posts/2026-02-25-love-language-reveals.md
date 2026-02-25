@@ -5,7 +5,7 @@ date: 2026-02-25
 author: "Monica Romero"
 categories: [Faith, Relationships, Emotional Healing]
 tags: [love languages, attachment, healing, emotional safety, relationships]
-image: /assets/img/blog/love-language-healing.jpg
+image: /assets/img/slider-img-2.jpg
 excerpt: "Your love language isn’t weakness. It may be a window into where you once felt unseen — and an invitation to heal with compassion."
 ---
 
