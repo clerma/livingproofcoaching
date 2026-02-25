@@ -1,14 +1,24 @@
 ---
 layout: post
-title: "You're One Decision Away From a Totally Different Life"
-date: 2026-02-25
-author: "Monica Romero"
-categories: [Faith, Growth, Mindset]
-tags: [decision making, breakthrough, faith, transformation, healing, personal growth]
-image: /assets/img/blog/one-decision-away.jpg
-excerpt: "Transformation doesn’t always begin with a miracle. Sometimes it begins with one brave decision."
+title: You're One Decision Away From a Totally Different Life
+date: 2026-02-25T00:00:00Z
+author: Monica Romero
+categories:
+  - Faith
+  - Growth
+  - Mindset
+tags:
+  - decision making
+  - breakthrough
+  - faith
+  - transformation
+  - healing
+  - personal growth
+image: /uploads/javier-allegue-barros-c7b-exxpoie-unsplash.jpg
+excerpt: >-
+  Transformation doesn’t always begin with a miracle. Sometimes it begins with
+  one brave decision.
 ---
-
 Most people think transformation requires something dramatic.
 
 A breakthrough moment.
