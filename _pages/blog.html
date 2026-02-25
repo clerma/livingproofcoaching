@@ -33,45 +33,7 @@ hero:
 
 <div class="py-10 pt-lg-16 pb-lg-12">
   <div class="container">
-    <!-- Category Navigation -->
-    <div class="row d-flex align-items-center mb-5">
-      <div class="col-md-8">
-        <div class="navbar-scroll">
-          <ul>
-            <li>
-              <a class="active ps-0" href="{{ '/blog/' | relative_url }}">
-                All
-              </a>
-            </li>
 
-            {% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq %}
-            {% for category in categories %}
-              {% unless category == "" %}
-              <li>
-                <a href="{{ '/categories/' | append: category | downcase | relative_url }}">
-                  {{ category }}
-                </a>
-              </li>
-              {% endunless %}
-            {% endfor %}
-
-          </ul>
-        </div>
-      </div>
-
-      <!-- Search Placeholder -->
-      <div class="col-md-4">
-        <form class="d-none d-md-block">
-          <div class="input-group">
-            <input type="text" class="form-control border-end-0"
-                   placeholder="Search our blog...">
-            <span class="input-group-text bg-transparent border border-start-0">
-              <i class="fa fa-search font-14"></i>
-            </span>
-          </div>
-        </form>
-      </div>
-    </div>
     <!-- Featured Post -->
     {% assign featured = site.posts.first %}
     {% if featured %}
