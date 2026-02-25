@@ -1,0 +1,125 @@
+---
+layout: default
+title: "Services | Living Proof"
+description: "Faith-based wellness coaching services for mind, body, and spirit. Mental health, spiritual growth, addiction recovery, relationships, and physical transformation."
+permalink: /services/
+
+hero:
+  background_image: "/assets/img/about-hero-img.jpg"
+  video_url:
+  heading: "Faith-Based Wellness Coaching"
+  subheading: "Whole-Person Healing for Mind, Body & Spirit"
+
+services_intro:
+  heading: "How We Support Your Healing Journey"
+  paragraphs:
+    - "Living Proof offers integrative coaching designed to address your mental health, spiritual growth, physical awareness, and relational wellbeing."
+    - "These are not isolated services — they are interconnected parts of your whole-person transformation."
+    - "When the mind, body, and spirit are aligned, healing becomes sustainable and embodied."
+
+services:
+  - title: "Faith & Spiritual Awakening"
+    description: "Spiritual assessment and coaching to help you reconnect with God, deepen your faith, and build spiritual rhythms rooted in truth."
+  - title: "Mental Health & Emotional Wellness"
+    description: "Support for anxiety, emotional regulation, identity restoration, and developing healthier thought patterns."
+  - title: "Addiction & Recovery Support"
+    description: "Faith-aligned coaching that addresses both spiritual and behavioral roots of addiction for lasting freedom."
+  - title: "Physical Fitness & Body Awareness"
+    description: "Guided body awareness and physical health practices that support emotional regulation and overall wellness."
+  - title: "Marriage & Relationship Coaching"
+    description: "Tools and guidance to strengthen communication, rebuild trust, and restore alignment in relationships."
+  - title: "Mindset & Motivational Transformation"
+    description: "Practical strategies to renew your mindset, clarify purpose, and move forward with confidence."
+
+testimonials:
+  - quote: "Working with Monica helped me reconnect my faith and emotional health in a way I never had before."
+    name: "Client"
+    title: "Faith-Based Coaching Client"
+  - quote: "Living Proof gave me practical tools that strengthened my mental health and deepened my spiritual walk."
+    name: "Client"
+    title: "Wellness Coaching Client"
+---
+<!-- HERO SECTION -->
+<div class="bg-cover"
+     style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
+     url('{{ page.hero.background_image | relative_url }}');">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+        <div class="py-lg-20 py-12 text-white text-center">
+
+          {% if page.hero.video_url %}
+          <a class="popup-youtube icon-shape rounded-circle btn-play icon-xl text-decoration-none mb-3"
+             href="{{ page.hero.video_url }}">
+            <i class="fas fa-play"></i>
+          </a>
+          {% endif %}
+
+          <h1 class="text-white mb-2 display-2">
+            {{ page.hero.heading }}
+          </h1>
+          <p class="lead text-light">
+            {{ page.hero.subheading }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- SERVICES INTRO -->
+     <div class="py-lg-16 py-6">
+       <div class="container">
+         <div class="row">
+           <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+
+             <h2 class="mb-4">{{ page.services_intro.heading }}</h2>
+
+             {% for paragraph in page.services_intro.paragraphs %}
+               <p>{{ paragraph }}</p>
+             {% endfor %}
+
+           </div>
+         </div>
+       </div>
+     </div>
+<!-- SERVICES GRID -->
+     <div class="container mb-5">
+       <div class="row">
+
+         {% for service in page.services %}
+         <div class="col-lg-4 col-md-6 col-12 mb-5">
+           <div class="p-5 border rounded h-100 shadow-sm bg-white">
+             <h4 class="mb-3">{{ service.title }}</h4>
+             <p>{{ service.description }}</p>
+           </div>
+         </div>
+         {% endfor %}
+
+       </div>
+     </div>
+<!-- TESTIMONIALS -->
+     <div class="pt-18 pb-10"
+          style="background:linear-gradient(360deg, #FFFFFF 0%, rgba(255,255,255,0) 102.23%), #F8F8F8;">
+       <div class="container">
+         <div class="row text-center mb-8">
+           <div class="offset-lg-2 col-lg-8 col-12">
+             <h2 class="h1">What Clients Are Saying</h2>
+           </div>
+         </div>
+
+         <div class="row">
+           {% for testimonial in page.testimonials %}
+           <div class="col-lg-6 col-md-12 col-12 mb-6">
+             <div class="p-6 bg-white rounded shadow-sm h-100">
+               <p class="h4 font-italic mb-4">
+                 “{{ testimonial.quote }}”
+               </p>
+               <p class="mb-0 fw-bold">{{ testimonial.name }}</p>
+               <p class="small text-muted">{{ testimonial.title }}</p>
+             </div>
+           </div>
+           {% endfor %}
+         </div>
+       </div>
+     </div>

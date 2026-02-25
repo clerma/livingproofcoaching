@@ -1,92 +1,167 @@
 ---
-layout: blog
-title: "Snippet-blog"
+layout: default
+title: "Blog | Living Proof"
 description: "{{ site.description }}"
-keywords: "blog, articles, news"
+keywords: "blog, faith, mental health, wellness"
 image: /assets/img/blog/default.jpg
-pagename: blog
 permalink: /blog/
+
+hero:
+  background_image: "/assets/img/pageheader-1.jpg"
+  heading: "Latest Articles"
+  subheading: "Insights on faith, healing, mindset, relationships, and whole-person wellness."
 ---
-
-
-
-    <!-- ============================================================== -->
-    <!-- main wrapper -->
-    <!-- ============================================================== -->
-    <div class="docs-main-wrapper">
-        <!-- ============================================================== -->
-<!-- navbar -->
-<!-- ============================================================== -->
-<div class="docs-header">
-    
+<!-- HERO SECTION -->
+<div class="bg-shape bg-cover"
+     style="background-image:linear-gradient(180deg, rgba(30,24,53,0.4) 0%, rgba(30,24,53,0.4) 90.16%),
+     url('{{ page.hero.background_image | relative_url }}');">
+  <div class="container">
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-12">
+        <div class="py-lg-19 py-16 text-center">
+          <h1 class="text-white mb-3 display-4">
+            {{ page.hero.heading }}
+          </h1>
+          <p class="lead text-light mb-0">
+            {{ page.hero.subheading }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- ============================================================== -->
-<!-- end navbar -->
-<!-- ============================================================== -->&nbsp;̰
-        <!-- ============================================================== -->
-        <!-- left sidebar -->
-        <!-- ============================================================== -->
-        <div class="docs-nav-sidebar">{% include blog-sidebar.html %}</div>
-        <!-- ============================================================== -->
-        <!-- end left sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- wrapper  -->
-        <!-- ============================================================== -->
-        <div class="docs-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    
-                    <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 border-start d-none d-xl-block">
-                        <div class="sidebar-nav-fixed">{% include blog-sidebar.html %}</div>
-                    </div>
 
-                {% for post in site.posts %}
-          <div class="col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12">
-            {% include postbox.html %}
+<div class="py-10 pt-lg-16 pb-lg-12">
+  <div class="container">
+    <!-- Category Navigation -->
+    <div class="row d-flex align-items-center mb-5">
+      <div class="col-md-8">
+        <div class="navbar-scroll">
+          <ul>
+            <li>
+              <a class="active ps-0" href="{{ '/blog/' | relative_url }}">
+                All
+              </a>
+            </li>
+
+            {% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq %}
+            {% for category in categories %}
+              {% unless category == "" %}
+              <li>
+                <a href="{{ '/categories/' | append: category | downcase | relative_url }}">
+                  {{ category }}
+                </a>
+              </li>
+              {% endunless %}
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+
+      <!-- Search Placeholder -->
+      <div class="col-md-4">
+        <form class="d-none d-md-block">
+          <div class="input-group">
+            <input type="text" class="form-control border-end-0"
+                   placeholder="Search our blog...">
+            <span class="input-group-text bg-transparent border border-start-0">
+              <i class="fa fa-search font-14"></i>
+            </span>
           </div>
-          {% endfor %}</div>
-            </div>
-        </div>
+        </form>
+      </div>
     </div>
-        <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <div class="docs-footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <p>Design &amp; Developed by <a href="https://codescandy.com" target="_blank">Codescandy</a></p>
-                </div>
-                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <div class="text-md-end docs-footer-links d-none d-sm-block">
-                        <a href="https://codescandy.com/contact-us/" target="_blank">Support</a>
-
-                    </div>
-                </div>
+    <!-- Featured Post -->
+    {% assign featured = site.posts.first %}
+    {% if featured %}
+    <div class="row">
+      <div class="col-12 mb-8">
+        <div class="card text-white border-0">
+          <img src="{{ featured.image | default: '/assets/img/blog/default.jpg' | relative_url }}"
+               class="card-img" alt="{{ featured.title }}">
+          <div class="card-img-overlay d-flex flex-column justify-content-end py-md-8 px-md-10 p-4">
+            {% for category in featured.categories limit:1 %}
+              <a href="#" class="text-info mb-3 font-14 fw-semi-bold">
+                {{ category }}
+              </a>
+            {% endfor %}
+            <h2 class="mb-3">
+              <a href="{{ featured.url | relative_url }}" class="text-white">
+                {{ featured.title }}
+              </a>
+            </h2>
+            <div class="font-14">
+              <span class="me-2">{{ featured.date | date: "%B %d, %Y" }}</span>
+              <span>Posted by {{ featured.author | default: "Monica Romero" }}</span>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+    {% endif %}
+    <div class="row">
+      {% for post in site.posts offset:1 %}
+      <div class="col-xl-4 col-lg-4 col-md-6 col-12">
+        <div class="mb-8">
 
-    <!-- ============================================================== -->
-    <!-- end footer -->
-    <!-- ============================================================== -->
+          <div class="mb-4">
+            <a href="{{ post.url | relative_url }}">
+              <div class="img-zoom">
+                <img src="{{ post.image | default: '/assets/img/blog/default.jpg' | relative_url }}"
+                     alt="{{ post.title }}"
+                     class="img-fluid rounded w-100">
+              </div>
+            </a>
+          </div>
 
-    <!-- ============================================================== -->
-    <!-- end main wrapper -->
-    <!-- ============================================================== -->
-    <!-- Libs JS -->
+          <div>
+            {% for category in post.categories limit:1 %}
+              <a href="#" class="text-info mb-3 font-14 d-inline-block fw-semi-bold">
+                {{ category }}
+              </a>
+            {% endfor %}
 
+            <a href="{{ post.url | relative_url }}">
+              <h3 class="mb-3">
+                {{ post.title }}
+              </h3>
+            </a>
 
+            <div class="mb-3 font-14">
+              <span class="me-2">{{ post.date | date: "%B %d, %Y" }}</span>
+              <span>Posted by {{ post.author | default: "Monica Romero" }}</span>
+            </div>
 
-
-
-
-<!-- Theme JS -->
-
-    
-
-
-
-
-
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+    <div class="py-lg-10 py-5 bg-light-primary">
+      <div class="container">
+        <div class="row">
+          <div class="offset-lg-3 col-lg-6 text-center">
+            <div class="card-body p-10">
+              <h2 class="mb-4">Get new articles in your inbox</h2>
+              <form class="row g-0">
+                <div class="col-9">
+                  <input type="email" class="form-control border-0"
+                         placeholder="Enter Email Address">
+                </div>
+                <div class="col-3">
+                  <button class="btn btn-primary" type="submit">
+                    Subscribe
+                  </button>
+                </div>
+              </form>
+              <p class="font-14 mb-0 mt-3">
+                We respect your privacy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
