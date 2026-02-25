@@ -278,7 +278,11 @@
 .bg-cover {
     background: no-repeat 50%/cover
 }
-
+.bg-top-cover {
+    background: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
 .hidden-bg {
     background-color: var(--coach-white);
     bottom: 0;
@@ -325,7 +329,13 @@
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
     transform: translateY(-12px)
 }
-
+.blog .card{
+    height: 30vh;
+}
+.blog .card img{
+   height: 30vh;
+      object-fit: cover;
+}
 /*!
  * Bootstrap  v5.3.0-alpha3 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors

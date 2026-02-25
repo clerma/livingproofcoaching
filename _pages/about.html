@@ -7,7 +7,6 @@ description: >-
 permalink: /about/
 hero:
   background_image: /uploads/481092325-624037317156906-3131821357492634330-n.jpg
-  video_url: https://www.youtube.com/watch?v=JRzWRZahOVU
   heading: Monica Romero
   subheading: Faith-Based Wellness Coach
 about_intro:
@@ -25,11 +24,11 @@ about_intro:
       Living Proof was born from that journey — proof that restoration is real
       and transformation is possible.
 gallery_images:
-  - /assets/img/coach-img-1.jpg
-  - /assets/img/coach-img-2.jpg
-  - /assets/img/coach-img-3.jpg
-  - /assets/img/coach-img-4.jpg
-  - /assets/img/coach-img-5.jpg
+  - image: /assets/img/coach-img-1.jpg
+  - image: /assets/img/coach-img-2.jpg
+  - image: /assets/img/coach-img-3.jpg
+  - image: /assets/img/coach-img-4.jpg
+  - image: /assets/img/coach-img-5.jpg
 testimonials:
   - quote: >-
       Working with Monica helped me reconnect my faith and emotional health in a
@@ -43,18 +42,13 @@ testimonials:
     title: Wellness Coaching Client
 ---
 <!-- HERO SECTION -->
-<div class="bg-cover" style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
+<div class="bg-top-cover" style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
      url('{{ page.hero.background_image | relative_url }}');">
   <div class="container">
     <div class="row">
       <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
         <div class="py-lg-20 py-12 text-white text-center">
 
-          {% if page.hero.video_url %}
-          <a class="popup-youtube icon-shape rounded-circle btn-play icon-xl text-decoration-none mb-3" href="{{ page.hero.video_url }}">
-            <i class="fas fa-play"></i>
-          </a>
-          {% endif %}
 
           <h1 class="text-white mb-2 display-2">
             {{ page.hero.heading }}
@@ -87,9 +81,9 @@ testimonials:
 <!-- IMAGE GALLERY -->
 <div class="container-fluid mb-5">
   <div class="row justify-content-center">
-    {% for image in page.gallery_images %}
+    {% for item in page.gallery_images %}
       <div class="col-md-2 me-2 mb-2">
-        <img src="{{ image | relative_url }}" alt="Monica Romero" class="w-100 rounded" />
+        <img src="{{ item.image | relative_url }}" alt="Monica Romero" class="w-100 rounded" />
       </div>
     {% endfor %}
   </div>
