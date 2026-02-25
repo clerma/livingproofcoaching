@@ -43,9 +43,13 @@ collections_config:
     disable_url: false
     description: ''
     _editables:
+      content:
+        bold: true
+        italic: true
+        underline: true
       text:
         allow_custom_markup: true
-        remove_custom_markup: false
+        remove_custom_markup: true
         bold: true
         copyformatting:
         italic: true
