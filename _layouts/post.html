@@ -1,21 +1,59 @@
 ---
 layout: default
 ---
+<div class="bg-shape bg-cover" style=" background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
+      {% if page.image %}url({{ page.image | relative_url }}){% endif %};">
+<div class="container">
+        <div class="row">
+          <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
+            <div class="text-center py-lg-19 py-16">
 
+              <!-- Categories -->
+              {% if page.categories %}
+                {% for category in page.categories %}
+                  <a href="{{ '/categories/' | append: category | downcase | relative_url }}"
+                     class="text-info mb-3 font-14 d-inline-block fw-semi-bold me-2">
+                    {{ category }}
+                  </a>
+                {% endfor %}
+              {% endif %}
 
+              <!-- Title -->
+              <h1 class="mb-3 display-4 text-white">
+                {{ page.title }}
+              </h1>
+
+              <!-- Date + Author -->
+              <div class="mb-3">
+                <div class="font-14 text-light">
+                  <span class="me-2">
+                    {{ page.date | date: "%B %d, %Y" }}
+                  </span>
+                  <span>
+                    Posted by
+                    <a href="#">
+                      {{ page.author | default: site.author | default: "Monica Romero" }}
+                    </a>
+                  </span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+<div class="pt-16 pb-16 ">
     <!-- Post Content -->
-    <section class="section-padding">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10">
-            {% if page.image %}
-            <img class="img-fluid mb-4 rounded" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-            {% endif %}
-            
+
+
             <div class="blog-content">
               {{ content }}
             </div>
-            
+
             <!-- Post Meta -->
             <div class="post-meta mt-5 pt-4 border-top">
               {% if page.tags.size > 0 %}
@@ -30,8 +68,6 @@ layout: default
           </div>
         </div>
       </div>
-    </section>
-
     <!-- Related Posts -->
     {% assign related = site.posts | where_exp: "post", "post.url != page.url" | sample: 3 %}
     {% if related.size > 0 %}
@@ -57,3 +93,4 @@ layout: default
       </div>
     </section>
     {% endif %}
+</div>
