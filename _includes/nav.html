@@ -1,46 +1,67 @@
-<nav class="navbar navbar-expand-lg navbar-default fixed-top border-3 border-top border-primary navbar-dark">
-  <div class="container">
+<div class="header fixed-top border-top-3 border-top border-primary">
+  <div class="container-lg">
 
-    <!-- Logo -->
-    <a class="navbar-brand" href="/">
-      <img src="{{ site.data.company.logo_image | relative_url }}" alt="Living Proof Logo" class="img-fluid w-50">
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-default">
 
-    <!-- Mobile Toggle -->
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbar-default" aria-controls="navbar-default"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="icon-bar top-bar mt-0"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
-    </button>
+      <!-- Logo -->
+      <a class="navbar-brand" href="/">
+        <img src="{{ site.data.company.logo_image | relative_url }}"
+             alt="Living Proof Logo" class="w-50">
+      </a>
 
-    <!-- Navigation -->
-    <div class="collapse navbar-collapse" id="navbar-default">
-      <ul class="navbar-nav ms-auto">
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler collapsed"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbar-default"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="icon-bar top-bar mt-0"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
 
-        {% assign current = page.url | replace: "index.html", "" %}
+      <!-- Navigation -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbar-default">
 
-        {% for item in site.data.navigation %}
-          {% assign item_url = item.url | relative_url %}
-          <li class="nav-item">
-            <a class="nav-link {% if current == item.url %}active{% endif %}"
-               href="{{ item_url }}">
-              {{ item.name }}
-            </a>
-          </li>
-        {% endfor %}
+        <!-- Close button (mobile) -->
+        <button class="navbar-toggler collapsed"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar-default"
+                aria-controls="navbar-default"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+          <i class="fas fa-times"></i>
+        </button>
 
-      </ul>
+        <ul class="navbar-nav ml-auto mr-lg-3">
 
-      <!-- Optional CTA Button -->
-      <div class="ms-lg-3">
-        <a href="/contact/" class="btn btn-primary btn-sm">
-          Book a Consultation
-        </a>
+          {% assign current = page.url | replace: "index.html", "" %}
+
+          {% for item in site.data.navigation %}
+            {% assign item_url = item.url | relative_url %}
+            <li class="nav-item">
+              <a class="nav-link {% if current == item.url %}active{% endif %}"
+                 href="{{ item_url }}">
+                {{ item.name }}
+              </a>
+            </li>
+          {% endfor %}
+
+        </ul>
+
+        <!-- CTA -->
+        <div class="header-btn">
+          <a href="/contact/" class="btn btn-primary btn-sm">
+            Book a Consultation
+          </a>
+        </div>
+
       </div>
 
-    </div>
+    </nav>
 
   </div>
-</nav>
+</div>

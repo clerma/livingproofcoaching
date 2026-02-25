@@ -22,8 +22,39 @@
 
 
 <!-- Libs CSS -->
-<link rel="stylesheet" href="{{ '/assets/css/bootstrap-icons.css' | relative_url }}">
+  <link rel="stylesheet" href="/assets/libs/tiny-slider/dist/tiny-slider.css">
+<link rel="stylesheet" href="/assets/libs/ion-rangeslider/css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="/assets/libs/litepicker/dist/css/litepicker.css">
+<link rel="stylesheet" href="/assets/libs/bootstrap-icons/font/bootstrap-icons.css">
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/theme.min.css' | relative_url }}">
 
+  <style id="offline-fixes">
+  /* Lazy-loaded images */
+  img[data-src], img[data-image] { opacity: 1 !important; }
+  .lazyload, .lazyloading { opacity: 1 !important; }
+  .offline-fallback-img { display: block !important; }
+
+  /* Animation classes that hide content until JS runs */
+  [data-animation-role].animation-loaded { opacity: 1 !important; }
+  .preFade.animation-loaded, .preSlide.animation-loaded {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Squarespace images */
+  .sqs-image img, .content-fill img { opacity: 1 !important; }
+  .fluid-image-container img { opacity: 1 !important; }
+
+  /* Embeds */
+  iframe { max-width: 100% !important; }
+  .sqs-block-video, .sqs-block-embed, .embed-block { overflow: visible !important; }
+  .video-player iframe, .sqs-video-wrapper iframe { display: block !important; opacity: 1 !important; }
+
+  /* Smooth scrolling for anchor links */
+  html { scroll-behavior: smooth; }
+
+  /* Wix hidden-during-prewarmup elements */
+  .hidden-during-prewarmup { opacity: 1 !important; visibility: visible !important; }
+</style>
