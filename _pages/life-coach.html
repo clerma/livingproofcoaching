@@ -104,90 +104,58 @@ permalink: /
       </div>
     </div>
 
-    <div class="row">
+ <div class="row">
+   {% for post in site.posts limit:3 %}
 
-      <!-- Post 1 -->
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-        <div class="mb-8">
-          <div class="mb-4">
-            <a href="/blog-classic/">
-              <div class="img-zoom">
-                <img src="{{ '/assets/img/post-thumb-img-1.jpg' | relative_url }}" alt="Healing mindset article" class="img-fluid rounded w-100">
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="#" class="text-info mb-3 font-14 d-inline-block fw-semi-bold">Mindset</a>
-            <a href="#">
-              <h3 class="mb-3">
-                Healing the Way You Think
-              </h3>
-            </a>
-            <div class="mb-3">
-              <div class="font-14">
-                <span class="me-2">September 12, 2024</span>
-                <span>Posted by <a href="#">Monica Romero</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+     <div class="mb-8">
 
-      <!-- Post 2 -->
-      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
-        <div class="mb-8">
-          <div class="mb-4">
-            <a href="/blog-classic/">
-              <div class="img-zoom">
-                <img src="{{ '/assets/img/post-thumb-img-2.jpg' | relative_url }}" alt="Faith and mental health article" class="img-fluid rounded w-100">
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="#" class="text-primary mb-3 font-14 d-inline-block fw-semi-bold">Faith & Mental Health</a>
-            <a href="#">
-              <h3 class="mb-3">
-                When Prayer Meets Emotional Work
-              </h3>
-            </a>
-            <div class="mb-3">
-              <div class="font-14">
-                <span class="me-2">September 11, 2024</span>
-                <span>Posted by <a href="#">Monica Romero</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+       <!-- Featured Image -->
+       <div class="mb-4">
+         <a href="{{ post.url | relative_url }}">
+           <div class="img-zoom">
+             <img src="{{ post.image | default: '/assets/img/default-blog.jpg' | relative_url }}"
+                  alt="{{ post.title }}"
+                  class="img-fluid rounded w-100">
+           </div>
+         </a>
+       </div>
 
-      <!-- Post 3 -->
-      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-md-none d-lg-block">
-        <div class="mb-8">
-          <div class="mb-4">
-            <a href="/blog-classic/">
-              <div class="img-zoom">
-                <img src="{{ '/assets/img/post-thumb-img-3.jpg' | relative_url }}" alt="Whole person wellness article" class="img-fluid rounded w-100">
-              </div>
-            </a>
-          </div>
-          <div>
-            <a href="#" class="text-warning mb-3 font-14 d-inline-block fw-semi-bold">Whole-Person Wellness</a>
-            <a href="#">
-              <h3 class="mb-3">
-                Why Healing Requires Integration
-              </h3>
-            </a>
-            <div class="mb-3">
-              <div class="font-14">
-                <span class="me-2">September 10, 2024</span>
-                <span>Posted by <a href="#">Monica Romero</a></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+       <div>
 
-    </div>
+         <!-- Category -->
+         {% if post.categories.size > 0 %}
+           <a href="#"
+              class="text-info mb-3 font-14 d-inline-block fw-semi-bold">
+             {{ post.categories | first }}
+           </a>
+         {% endif %}
+
+         <!-- Title -->
+         <a href="{{ post.url | relative_url }}">
+           <h3 class="mb-3">
+             {{ post.title }}
+           </h3>
+         </a>
+
+         <!-- Date + Author -->
+         <div class="mb-3">
+           <div class="font-14">
+             <span class="me-2">
+               {{ post.date | date: "%B %d, %Y" }}
+             </span>
+             <span>
+               Posted by {{ post.author | default: "Monica Romero" }}
+             </span>
+           </div>
+         </div>
+
+       </div>
+     </div>
+   </div>
+
+   {% endfor %}
+ </div>
   </div>
 </div>
 <div class="pt-0 pb-0">
