@@ -43,61 +43,7 @@ permalink: /contact/
               </p>
             </div>
 
-            <form method="POST" action="#">
-              <div class="row">
-
-                <div class="col-md-6 col-12 mb-3">
-                  <input type="text"
-                         class="form-control"
-                         placeholder="First Name"
-                         name="first_name"
-                         required>
-                </div>
-
-                <div class="col-md-6 col-12 mb-3">
-                  <input type="text"
-                         class="form-control"
-                         placeholder="Last Name"
-                         name="last_name"
-                         required>
-                </div>
-
-                <div class="col-12 mb-3">
-                  <input type="email"
-                         class="form-control"
-                         placeholder="Email Address"
-                         name="email"
-                         required>
-                </div>
-
-                <div class="col-12 mb-3">
-                  <select class="form-select" name="inquiry_type" required>
-                    <option value="" disabled selected>Select Inquiry Type</option>
-                    <option value="coaching">Coaching Inquiry</option>
-                    <option value="speaking">Speaking Engagement</option>
-                    <option value="partnership">Partnership / Collaboration</option>
-                    <option value="general">General Question</option>
-                  </select>
-                </div>
-
-                <div class="col-12 mb-4">
-                  <textarea class="form-control"
-                            rows="5"
-                            name="message"
-                            placeholder="Tell us a little about what you're looking for..."
-                            required></textarea>
-                </div>
-
-                <div class="col-12">
-                  <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-lg">
-                      Send Message
-                    </button>
-                  </div>
-                </div>
-
-              </div>
-            </form>
+           {% include form.html %}
 
           </div>
         </div>
