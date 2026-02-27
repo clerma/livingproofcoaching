@@ -44,7 +44,10 @@ collections_config:
     description: ''
     _editables:
       content:
+        allow_custom_markup: false
+        remove_custom_markup: false
         bold: true
+        image_size_attributes: true
         italic: true
         underline: true
       text:
@@ -110,6 +113,9 @@ _inputs:
     cascade: true
   description:
     type: textarea
+    cascade: true
+  paragraph:
+    type: html
     cascade: true
 _select_data:
   jekyll-archives:
