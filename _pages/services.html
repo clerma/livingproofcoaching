@@ -48,17 +48,6 @@ services:
     description: >-
       Practical strategies to renew your mindset, clarify purpose, and move
       forward with confidence.
-testimonials:
-  - quote: >-
-      Working with Monica helped me reconnect my faith and emotional health in a
-      way I never had before.
-    name: Client
-    title: Faith-Based Coaching Client
-  - quote: >-
-      Living Proof gave me practical tools that strengthened my mental health
-      and deepened my spiritual walk.
-    name: Client
-    title: Wellness Coaching Client
 ---
 <!-- HERO SECTION -->
 <div class="bg-cover" style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
@@ -127,7 +116,7 @@ testimonials:
          </div>
 
          <div class="row">
-           {% for testimonial in page.testimonials %}
+           {% for testimonial in site.data.testimonials %}
            <div class="col-lg-6 col-md-12 col-12 mb-6">
              <div class="p-6 bg-white rounded shadow-sm h-100">
                <p class="h4 font-italic mb-4">

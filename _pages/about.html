@@ -29,20 +29,6 @@ gallery_images:
   - image: /uploads/ca8a2058.jpeg
   - image: /uploads/ca8a2133.jpeg
   - image: /uploads/ca8a2221.jpeg
-testimonials:
-  - quote: >-
-      I love this so much. You are a blessing to so many & Amazing things are coming and I know it's completely god driven. Thank you for all that you do and have done to help me on my journey. Congratulations you are one of the most amazing and beautiful women I am blessed to know that god led me to. I wish you all the best
-    name: Client
-    title: Coaching Client
-  - quote: >-
-      "We love you so much .. you touched my heart right away and helped me so much when I needed it .. you are true blessing to all who know you ... I couldn't have done some things without your patience and
-      support in the hardest thing I had to do in my life so far .. Only God.."
-    name: Client
-    title: Coaching Client
-  - quote: >-
-      "Monica has been in my life for sometime before living proof; and she was such a blessing before she began her program. In the short time that I have been working with her in the program I have began to open up my mind to what I need to heal instead of need to fix or throw away. Monica and is kinda and gentle and wants to best for all of her people. I am so glad I get to meet with her and start the journey of healing."
-    name: Client
-    title: Coaching Client
 ---
 <!-- HERO SECTION -->
 <div class="bg-top-cover mt-10 mt-md-5" style="background-image:linear-gradient(180deg, rgba(30, 24, 53, 0.4) 0%, rgba(30, 24, 53, 0.4) 90.16%),
@@ -96,7 +82,7 @@ testimonials:
     </div>
 
     <div class="row">
-      {% for testimonial in page.testimonials %}
+      {% for testimonial in site.data.testimonials %}
       <div class="col-lg-6 col-md-12 col-12 mb-6">
         <div class="p-6 bg-white rounded shadow-sm h-100">
           <p class="h4 font-italic mb-4">
