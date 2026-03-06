@@ -389,13 +389,13 @@
     --coach-light-secondary: #ebddff;
     --coach-light-success: #e8fff3;
     --coach-primary-rgb: 215, 185, 55;
-    --coach-secondary-rgb: 31, 90, 83;
+    --coach-secondary-rgb: 215, 185, 55;
     --coach-success-rgb: 36, 161, 72;
-    --coach-info-rgb: 23, 162, 184;
+    --coach-info-rgb: 255, 193, 7;
     --coach-warning-rgb: 255, 193, 7;
     --coach-danger-rgb: 234, 67, 54;
     --coach-light-rgb: 244, 244, 245;
-    --coach-dark-rgb: 49, 139, 129;
+    --coach-dark-rgb: 12, 13, 23;
     --coach-light-primary-rgb: 241, 241, 241;
     --coach-light-danger-rgb: 255, 235, 234;
     --coach-light-info-rgb: 208, 255, 255;
@@ -440,7 +440,7 @@
     --coach-body-bg: #fff;
     --coach-body-bg-rgb: 37, 36, 36;
     --coach-emphasis-color: #261f44;
-    --coach-emphasis-color-rgb: 38, 31, 68;
+    --coach-emphasis-color-rgb: 250, 250, 250;
     --coach-secondary-color: rgba(111, 105, 133, .75);
     --coach-secondary-color-rgb: 111, 105, 133;
     --coach-secondary-bg: #eae9ec;
@@ -451,7 +451,7 @@
     --coach-tertiary-bg-rgb: 244, 244, 245;
     --coach-heading-color: var(--coach-gray-900);
     --coach-link-color: #d7b937;
-    --coach-link-color-rgb: 255, 89, 56;
+    --coach-link-color-rgb: 12, 13, 23;
     --coach-link-decoration: none;
     --coach-link-hover-color: #1e5a53;
     --coach-link-hover-color-rgb: 204, 71, 45;
@@ -9896,7 +9896,7 @@ fieldset:disabled .btn {
     position: fixed;
     right: 0;
     z-index: 1030;
-    background-color: #318b81;
+    background-color: #0c0d17;
 }
 
 .fixed-bottom {
