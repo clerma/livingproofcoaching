@@ -6213,7 +6213,8 @@ fieldset:disabled .btn {
     /* margin-right: var(--coach-navbar-brand-margin-end); */
     padding-bottom: var(--coach-navbar-brand-padding-y);
     padding-top: var(--coach-navbar-brand-padding-y);
-    white-space: nowrap
+    white-space: nowrap;
+    width: 18em;
 }
 
 .navbar-brand:focus,
