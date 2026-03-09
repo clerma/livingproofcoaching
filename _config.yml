@@ -1,6 +1,6 @@
 # Core Site Settings
-title: coach temp
-name: coach temp
+title: Living Proof Coaching
+name: Living Proof coaching
 description: ""
 author: Site Author
 baseurl: ""
@@ -24,7 +24,7 @@ bing_site_verification:
 
 # Contact Information
 phone:
-email:
+email: Romero@livproofllc.net
 
 # Location Data
 latitude:

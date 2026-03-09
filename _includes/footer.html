@@ -6,19 +6,19 @@
       <!-- About -->
       <div class="col-lg-3 col-md-6 col-6">
         <div class="mb-4">
-          <h4 class="mb-4 text-white">Living Proof</h4>
+          <h4 class="mb-4 text-white editable">Living Proof</h4>
           <ul class="list-unstyled list-group">
             <li class="list-group-item bg-dark border-0">
-              <a href="/about/" class="list-group-item-link text-light">About Monica</a>
+              <a href="/about/" class="list-group-item-link text-light editable">About Monica</a>
             </li>
             <li class="list-group-item bg-dark border-0">
-              <a href="/contact/" class="list-group-item-link text-light">Work With Me</a>
+              <a href="/contact/" class="list-group-item-link text-light editable">Work With Me</a>
             </li>
             <li class="list-group-item bg-dark border-0">
-              <a href="/blog/" class="list-group-item-link text-light">Blog</a>
+              <a href="/blog/" class="list-group-item-link text-light editable">Blog</a>
             </li>
             <li class="list-group-item bg-dark border-0">
-              <a href="/contact/" class="list-group-item-link text-light">Contact</a>
+              <a href="/contact/" class="list-group-item-link text-light editable">Contact</a>
             </li>
           </ul>
         </div>
@@ -27,13 +27,13 @@
       <!-- Areas of Support -->
       <div class="col-lg-3 col-md-6 col-6">
         <div class="mb-4">
-          <h4 class="mb-4 text-white">Areas of Support</h4>
+          <h4 class="mb-4 text-white editable">Areas of Support</h4>
           <ul class="list-unstyled list-group">
-            <li class="list-group-item bg-dark border-0 text-light">Faith & Spiritual Growth</li>
-            <li class="list-group-item bg-dark border-0 text-light">Mental Health</li>
-            <li class="list-group-item bg-dark border-0 text-light">Addiction & Recovery</li>
-            <li class="list-group-item bg-dark border-0 text-light">Physical Wellness</li>
-            <li class="list-group-item bg-dark border-0 text-light">Marriage & Relationships</li>
+            <li class="list-group-item bg-dark border-0 text-light editable">Faith & Spiritual Growth</li>
+            <li class="list-group-item bg-dark border-0 text-light editable">Mental Health</li>
+            <li class="list-group-item bg-dark border-0 text-light editable">Addiction & Recovery</li>
+            <li class="list-group-item bg-dark border-0 text-light editable">Physical Wellness</li>
+            <li class="list-group-item bg-dark border-0 text-light editable">Marriage & Relationships</li>
           </ul>
         </div>
       </div>
@@ -41,26 +41,51 @@
       <!-- Connect -->
       <div class="col-lg-3 col-md-6 col-6">
         <div class="mb-4">
-          <h4 class="mb-4 text-white">Connect</h4>
-          <ul class="list-unstyled list-group">
-            <li class="list-group-item bg-dark border-0">
-              <a href="#" class="list-group-item-link text-light">Instagram</a>
-            </li>
-            <li class="list-group-item bg-dark border-0">
-              <a href="#" class="list-group-item-link text-light">Facebook</a>
-            </li>
-            <li class="list-group-item bg-dark border-0">
-              <a href="#" class="list-group-item-link text-light">LinkedIn</a>
-            </li>
-          </ul>
+          <h4 class="mb-4 text-white editable">Connect</h4>
+        <ul class="list-unstyled list-group">
+
+          {% if site.data.company.social.instagram %}
+          <li class="list-group-item bg-dark border-0">
+            <a href="{{ site.data.company.social.instagram }}"
+               class="list-group-item-link text-light"
+               target="_blank"
+               rel="noopener">
+               Instagram
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.data.company.social.facebook %}
+          <li class="list-group-item bg-dark border-0">
+            <a href="{{ site.data.company.social.facebook }}"
+               class="list-group-item-link text-light"
+               target="_blank"
+               rel="noopener">
+               Facebook
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.data.company.social.linkedin %}
+          <li class="list-group-item bg-dark border-0">
+            <a href="{{ site.data.company.social.linkedin }}"
+               class="list-group-item-link text-light"
+               target="_blank"
+               rel="noopener">
+               LinkedIn
+            </a>
+          </li>
+          {% endif %}
+
+        </ul>
         </div>
       </div>
 
       <!-- Newsletter -->
       <div class="col-lg-3 col-md-6 col-12">
         <div class="mb-4">
-          <h4 class="mb-4 text-white">Stay Encouraged</h4>
-          <p class="text-light">
+          <h4 class="mb-4 text-white editable">Stay Encouraged</h4>
+          <p class="text-light editable">
             Receive faith-centered encouragement, wellness insights, and practical tools for whole-person healing.
           </p>
           <form>
@@ -80,7 +105,7 @@
               © {{ "now" | date: "%Y" }} Living Proof Wellness Coaching
             </li>
             <li class="list-inline-item">
-              <a href="/terms-and-condition" class="text-reset">Terms of Use</a>
+              <a href="/terms-and-condition" class="text-reset editable">Terms of Use</a>
             </li>
           </ul>
         </div>

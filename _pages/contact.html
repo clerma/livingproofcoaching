@@ -16,8 +16,8 @@ permalink: /contact/
     <div class="row">
       <div class="offset-lg-2 col-lg-8 col-md-12 col-12">
         <div class="text-center py-lg-20 py-12">
-          <h1 class="mb-3 display-4 text-white">Let’s Connect</h1>
-          <p class="lead text-light">
+          <h1 class="mb-3 display-4 text-white editable">Let’s Connect</h1>
+          <p class="lead text-light editable">
             Whether you're ready to begin your healing journey, book a speaking engagement,
             or simply have a question — I’d love to hear from you.
           </p>
@@ -37,8 +37,8 @@ permalink: /contact/
           <div class="card-body p-4 p-lg-8">
 
             <div class="mb-5">
-              <h2 class="mb-3">Start the Conversation</h2>
-              <p>
+              <h2 class="mb-3 editable">Start the Conversation</h2>
+              <p class="editable">
                 Fill out the form below and we’ll respond within 1–2 business days.
               </p>
             </div>
@@ -52,23 +52,23 @@ permalink: /contact/
         <div class="row text-center">
 
           <div class="col-md-6 col-12 mb-6 mb-md-0">
-            <h4 class="h5 mb-2">Email</h4>
-            <a href="mailto:hello@livingprooflifecoaching.com"
-               class="fw-bold text-primary">
-              hello@livingprooflifecoaching.com
+            <h4 class="h5 mb-2 editable">Email</h4>
+            <a href="mailto:{{site.data.company.email}}"
+               class="fw-bold text-primary editable">
+              {{site.data.company.email}}
             </a>
           </div>
 
           <div class="col-md-6 col-12">
-            <h4 class="h5 mb-2">Speaking & Media</h4>
-            <a href="mailto:hello@livingprooflifecoaching.com"
-               class="fw-bold text-primary">
+            <h4 class="h5 mb-2 editable">Speaking & Media</h4>
+            <a href="mailto:{{site.data.company.email}}"
+               class="fw-bold text-primary editable">
               Inquire via email
             </a>
           </div>
 
         </div>
-
+{% comment %}
         <!-- SOCIAL -->
         <div class="row">
           <div class="col-12">
@@ -86,7 +86,7 @@ permalink: /contact/
             </div>
           </div>
         </div>
-
+{% endcomment %}
       </div>
     </div>
   </div>
