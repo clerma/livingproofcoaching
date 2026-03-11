@@ -10,23 +10,30 @@
 <script src="/assets/libs/inputmask/dist/jquery.inputmask.min.js"></script>
 <script src="/assets/libs/tiny-slider/dist/min/tiny-slider.js"></script>
 
-
 <!-- clipboard -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js"></script>
-
-
 
 <!-- Theme JS -->
 <script src="/assets/js/theme.min.js"></script>
 
+<script id="offline-scroll">
+  document.addEventListener('click', function(e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute('href').slice(1);
+    if (!id) { window.scrollTo({top:0,behavior:'smooth'}); e.preventDefault(); return; }
+    var target = document.getElementById(id) || document.querySelector('[data-anchor="'+id+'"]');
+    if (target) { target.scrollIntoView({behavior:'smooth'}); e.preventDefault(); }
+  });
+</script>
 
-  <script id="offline-scroll">
-    document.addEventListener('click', function(e) {
-      var link = e.target.closest('a[href^="#"]');
-      if (!link) return;
-      var id = link.getAttribute('href').slice(1);
-      if (!id) { window.scrollTo({top:0,behavior:'smooth'}); e.preventDefault(); return; }
-      var target = document.getElementById(id) || document.querySelector('[data-anchor="'+id+'"]');
-      if (target) { target.scrollIntoView({behavior:'smooth'}); e.preventDefault(); }
-    });
-  </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{site.google_analytics}}');
+</script>
