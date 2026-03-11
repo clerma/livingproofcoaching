@@ -9,9 +9,9 @@ paths:
   layouts: _layouts
   includes: _includes
 collections_config:
-  data:
-    path: _data
-    icon: database
+  pages:
+    path: _pages
+    icon: note_add
     disable_url: false
     description: ''
     _enabled_editors:
@@ -28,9 +28,9 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
-  pages:
-    path: ''
-    icon: wysiwyg
+  data:
+    path: _data
+    icon: database
     disable_url: false
     description: ''
     _enabled_editors:
